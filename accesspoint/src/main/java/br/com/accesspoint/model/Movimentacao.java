@@ -13,6 +13,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -30,6 +31,8 @@ public class Movimentacao {
     @NoArgsConstructor
     @EqualsAndHashCode
     @Embeddable
+    @Getter
+    @Setter
     public class MovimentacaoId implements Serializable{
         private Long idMovimento;
         private Long idUsuario;
@@ -44,6 +47,8 @@ public class Movimentacao {
     private LocalDateTime dataEntrada;
     private LocalDateTime dataSaida;
     private BigDecimal periodo;
+    @ManyToOne
     private Ocorrencia ocorrencia;
+    @ManyToOne
     private Calendario calendario;
 }

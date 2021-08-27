@@ -30,6 +30,8 @@ public class BancoDeHoras {
     @AllArgsConstructor
     @NoArgsConstructor
     @EqualsAndHashCode
+    @Getter
+    @Setter
     public class BancoHorasID implements Serializable {
         private long idBancoHoras;
         private long idMovimentacao;
