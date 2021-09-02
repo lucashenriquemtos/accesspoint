@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface JornadaTrabalhoRepository extends JpaRepository<JornadaTrabalho, Long> {
-
+    
 }
