@@ -25,4 +25,12 @@ public class JornadaService {
     public Optional<JornadaTrabalho> findById(long id) {
         return jornadaTrabalhoRepository.findById(id);
     }
+
+    public JornadaTrabalho atualizarJornada(JornadaTrabalho jornadaTrabalho) {
+        return jornadaTrabalhoRepository.save(jornadaTrabalho);
+    }
+
+    public void deletarJornada(Long id){
+        jornadaTrabalhoRepository.deleteById(id);
+    }
 }
